@@ -11,8 +11,6 @@
   <Reference Relative="..\Console1\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll">C:\projects\esri\Presentations\Linqpad\Console1\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</Reference>
   <Reference>&lt;ProgramFilesX86&gt;\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.DataSetExtensions.dll</Reference>
   <Reference>&lt;ProgramFilesX86&gt;\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\System.Data.dll</Reference>
-  <NuGetReference>HtmlAgilityPack</NuGetReference>
-  <Namespace>HtmlAgilityPack</Namespace>
   <Namespace>System.Data</Namespace>
   <Namespace>System.Data.Entity</Namespace>
   <Namespace>System.Data.SqlClient</Namespace>
@@ -20,33 +18,21 @@
 
 void Main()
 {
-	//var hd = new HtmlDocument();
-	//hd.l("http://example.com");
-	//hd.Dump();
-	var hw = new HtmlWeb();
-	
-	HtmlDocument doc = null;
-	
-	doc = LINQPad.Util.Cache(()=> 
-	{
-		"Fetching data...".Dump();
-		return hw.Load("http://localhost.esri.com:8080");
-	}, "The data");
-	//hw.ResponseUri.Host.Dump("ResponseUri.Host");
-	//doc.DocumentNode.OuterHtml.Dump();
+	var myclass1 = new Console1.MyClass();
 	
 	
-	doc.DocumentNode.Descendants("title").SingleOrDefault().InnerHtml.Dump("Title");
-	doc.DocumentNode.Descendants("link").Where (dn => dn.Attributes["rel"].Value=="canonical")
-	.Select (dn => dn.GetAttributeValue("href", ""))
-	.FirstOrDefault()
-	.Dump("canonical");
-	doc.DocumentNode.SelectNodes("//a")
-		.Select (dn => new {
-			dn.Line, dn.LinePosition, dn.InnerText, href=dn.GetAttributeValue("href", "")
-		})
-		.Dump();
+	//Debugger.Launch();
+	var helloString = myclass1.SayHello();
+	helloString.Dump();
 	
+	//myclass1.GetCustomerNames().Dump("From Program", 1);
+	
+//	 //var ctx= this;
+//	 //var customerNames = ctx.
+//	 	Customers
+//			.Where (c => c.ContactName.StartsWith("b"))
+//	 	//.Select (c => string.Concat(c.ContactName, " @ ", c.CompanyName))
+//	 	.Dump();
 }
 
 // Define other methods and classes here
