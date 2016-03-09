@@ -192,6 +192,7 @@
     <Compile Include="Data\Whole_Or_Partial_Customers_Set_Result.cs">
       <DependentUpon>Northwind.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProductModels.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
