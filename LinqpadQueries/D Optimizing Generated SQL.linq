@@ -21,7 +21,7 @@ void Main()
 	//you could use SQL Profile to trace the SQL... or LINQPAD
 	var findProductContaining = "";//"mix";
 	//GetProductsWithCategories(findProductContaining);
-	//GetProductsWithCategories2(findProductContaining);
+	GetProductsWithCategories2(findProductContaining);
 	
 	
 //	var myclass1 = new Console1.MyClass();

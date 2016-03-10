@@ -2,8 +2,8 @@
   <Output>DataGrids</Output>
 </Query>
 
-"hello world".AsEnumerable()
+"hello world"
+	.AsEnumerable()
 	.Select (x => 
-		x
-		//x.SayHello()
+		x.SayHello()
 	)

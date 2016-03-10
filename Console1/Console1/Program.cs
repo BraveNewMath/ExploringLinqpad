@@ -12,7 +12,7 @@ namespace Console1
         {
             Console.WriteLine(new MyClass().SayHello());
             Console.WriteLine("Press any key to exit");
-            //Console.ReadKey();
+            Console.ReadKey();
         }
 
         

@@ -25,7 +25,7 @@ void Main()
 	var helloString = myclass1.SayHello();
 	helloString.Dump();
 	
-	//myclass1.GetCustomerNames().Dump("From Program", 1);
+	myclass1.GetCustomerNames().Dump("From Program", 1);
 	
 //	 //var ctx= this;
 //	 //var customerNames = ctx.
@@ -36,4 +36,3 @@ void Main()
 
 	
 }
-
